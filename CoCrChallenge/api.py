@@ -36,11 +36,6 @@ def health():
         'status': "ok"
     }
     return jsonify(result)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-
-
 @app.route('/upload', methods=['POST'])
 def upload_video():
     """Accept a multipart file upload (form field 'video'), save to a temp file,
@@ -88,3 +83,7 @@ def upload_video():
                 os.remove(tmp_path)
             except Exception:
                 pass
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
