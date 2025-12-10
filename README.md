@@ -12,6 +12,12 @@ source venv/bin/activate    # macOS/Linux
 # install backend dependencies
 pip install -r requirements.txt
 
+# Models required by the backend (download and place in the `CoCrChallenge` directory):
+# - YOLO face model: download `yolov8s-face-lindevs.pt` from
+#   https://github.com/lindevs/yolov8-face and place the `.pt` file in the `CoCrChallenge` folder.
+# - Vosk small English model: download `vosk-model-small-en-us-0.15` from
+#   https://alphacephei.com/vosk/models and extract the model directory into `CoCrChallenge/vosk-model-small-en-us-0.15`.
+
 # run the backend
 cd CoCrChallenge
 python3 api.py
